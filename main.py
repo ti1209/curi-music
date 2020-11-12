@@ -6,7 +6,7 @@ from bson.json_util import dumps
 
 app = Flask(__name__)
 
-client = MongoClient("mongodb+srv://admin:admin@curi-music.vjogm.mongodb.net/musicDB?retryWrites=true&w=majority")
+client = MongoClient("mongodb address")
 
 db = client['musicDB']
 col = db['musiclist']
