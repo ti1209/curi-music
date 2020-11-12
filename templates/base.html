@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>☆ Welcome to CURi ☆</title>
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='ico.png') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    {% block style %}
+    {% endblock style %}
+
+    <style>
+    .nanumsquare {font-family: 'NanumSquare', sans-serif !important;}
+    </style>
+</head>
+
+<body class="nanumsquare">
+<center>
+    <br><br>
+    <img src="{{ url_for('static', filename='logo.png') }}" style="width: 15%; height: 15%;">
+
+    {% block body %}
+    {% endblock body %}
+</center>
+</body>
+</html>

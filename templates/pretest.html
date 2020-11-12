@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style type="text/css">
+a:link { color: black; text-decoration: none; }
+a:visited { color: black; text-decoration: none; }
+a:hover { cursor: pointer; color: black; text-decoration: none; }
+a { float: right; padding-right: 10%; font-size: 18pt; }
+</style>
+{% endblock style %}
+
+{% block body %}
+<br>
+<a href="javascript:BackToLevel();" style="float: left; padding-left: 20%;">뒤로가기</a>
+<a href="{{ url_for('exercise') }}" style="float: right; padding-right: 20%;">운동시작!</a>
+<br>
+<b><h1>동작 사전 점검</h1>
+<h2 style="color: #7F7F7F;">앉았다 일어나는 동작을 5번 시행하세요!</h2></b>
+<br>
+<div style="width: 80%;">
+</div>
+{% endblock body %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style type="text/css">
+a:link { color: black; text-decoration: none; }
+a:visited { color: black; text-decoration: none; }
+a:hover { cursor: pointer; color: black; text-decoration: none; }
+a { float: right; padding-right: 10%; font-size: 18pt; }
+</style>
+{% endblock style %}
+
+{% block body %}
+<br>
+<a href="{{ url_for('main') }}" style="float: left; padding-left: 20%;">뒤로가기</a>
+<br>
+<b><h1>운동 강도 선택</h1>
+<h2 style="color: #7F7F7F;">나의 목표와 실력에 알맞게 설정할 수 있는 맞춤형 강도를 선택하세요.</h2></b>
+<br>
+<div style="width: 80%;">
+    <div class="low" style="float: left; width: 28%; height: 40%; padding-left: 5%;">
+        <img src="{{ url_for('static', filename='low.png') }}" onclick="LevelButtonClicked(Event.x, Event.y)"
+             style="max-width: 100%; height: auto;">
+    </div>
+    <div class="middle" style="float: left; width: 28%; height: 40%; padding-left: 3%; padding-right: 3%;">
+        <img src="{{ url_for('static', filename='middle.png') }}"
+             onclick="location.href='{{ url_for('pretest') }}'"style="max-width: 100%; height: auto;">
+    </div>
+    <div class="high" style="float: right; width: 28%; height: 40%; padding-right: 5%;">
+        <img src="{{ url_for('static', filename='high.png') }}"
+             onclick="location.href='{{ url_for('pretest') }}'" style="max-width: 100%; height: auto;">
+    </div>
+</div>
+{% endblock body %}
